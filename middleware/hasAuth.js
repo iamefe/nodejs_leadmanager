@@ -11,5 +11,5 @@ exports.hasAuth = function(req, res, next) {
     if (req.user && req.user.is_admin == true)
         next();
     else
-        next(createError(404, "Page does not exist."));
+        next(createError(404, "You don't have admin access to view this page."));
 }
